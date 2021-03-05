@@ -1,0 +1,33 @@
+$enable-flex            : true;
+
+$container-max-widths   : (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1339px
+);
+
+$grid-breakpoints       : (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$grid-gutter-width      : 24px;
+$font-size-base         : 1rem;
+$font-family-sans-serif : -apple-system, 'BlinkMacSystemFont', 'SF Pro Text', sans-serif;
+$font-family-base       : $font-family-sans-serif;
+$mineShaft              : #2C2A2A;
+$thunderBird            : #B81E1D;
+$box-shadow             : rgba(0, 0, 0, .16);
+$scorpion               : #585858;
+$mischka                : #D8D8E0;
+$crimson                : #E1351A;
+$tamarillo              : #D31616;
+$guardsman              : #D30000;
+$gallery                : #EAEAEA;
+$alto                   : #D8D8D8;
+$mineShaftToy           : #393939;
+$codGray                : #0A0A0A;

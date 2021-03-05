@@ -1,0 +1,60 @@
+footer {
+  padding-top    : 21px;
+  padding-bottom : 112px;
+
+  @media (max-width: 992px) {
+    padding-bottom : 21px;
+  }
+
+  .logo {
+    span {
+      padding-left : 29px;
+      display      : block;
+
+      img {
+        height  : 50px;
+        width   : auto;
+        display : block;
+      }
+    }
+  }
+
+  ul {
+    li {
+      list-style : none;
+      display    : inline;
+    }
+  }
+
+  .address{
+    line-height: 25px;
+  }
+
+  nav {
+    ul {
+      display         : flex;
+      flex-wrap       : wrap;
+      width : 100%;
+
+      li {
+        margin-right : 20px;
+
+        &:last-of-type{
+          margin-right: 0;
+        }
+
+        a {
+          font-weight    : 600;
+          color          : $mineShaft;
+          text-transform : uppercase;
+          transition     : .4s ease-in-out;
+
+          &:hover,
+          &.active {
+            color : $thunderBird
+          }
+        }
+      }
+    }
+  }
+}

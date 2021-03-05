@@ -1,0 +1,286 @@
+header {
+  @media (min-width: 1199px) {
+    height: 74px;
+  }
+
+  #mobile_menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 0;
+    height: 100%;
+    z-index : 999999;
+
+    &.open {
+      display: block;
+      animation: menuOpen .6s forwards;
+    }
+
+    >div {
+      width: 100%;
+      height: 100%;
+      position : relative;
+
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 20px;
+      }
+
+      ul {
+        position: absolute;
+        top: 20%;
+        width : 100%;
+        opacity: 0;
+        transition: .2s ease-in-out;
+
+        &.open {
+          opacity: 1;
+        }
+
+        li{
+          text-align: center;
+          display : block;
+          &:not(:last-of-type) {
+            margin-bottom: 10px;
+            &::after {
+              content: '';
+              border-bottom: 1px solid gray;
+              width : 30px;
+              display: block;
+              margin: 0 auto;
+              margin-top: 5px;
+            }
+          }
+
+          a {
+            color: black;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  > .w-100:first-of-type {
+    padding: 12px 0;
+  }
+
+  .fixed {
+    width            : 101%;
+    max-width        : 1339px;
+    position         : fixed;
+    top              : 0;
+    animation        : slideInDown .6s;
+    background-image : url('~@/assets/img/backdrop.jpg');
+    background-attachment: fixed;
+    transition       : background-color .2s ease-in-out;
+    z-index          : 9999;
+  }
+
+  .logo {
+    cursor : pointer;
+    display : flex;
+
+    .menu {
+      margin-right : 10px;
+      display: inline-block;
+      &::before {
+        content: url('~@/assets/img/menu.svg');
+        display: inline-block;
+        height: 17px;
+        position : relative;
+        top: 5px;
+        cursor : pointer;
+      }
+    }
+
+    span {
+      padding-left : 29px;
+      display: inline-block;
+
+      @media (max-width: 768px) {
+        padding-left : 0;
+      }
+
+      img {
+        height  : auto;
+        width   : 100%;
+        max-width : 160px;
+        display : inline-block;
+      }
+    }
+  }
+
+  ul {
+    li {
+      list-style : none;
+      display    : inline;
+    }
+  }
+
+  .social {
+    ul {
+      li {
+        &:last-of-type {
+          cursor : pointer;
+
+          &::before {
+            content       : '';
+            border-left  : 1px solid $black;
+            padding-left : 10px;
+            position : relative;
+            top: 2px;
+          }
+        }
+
+        &:not(:last-of-type) {
+          margin-right : 10px;
+        }
+
+        &.search-wrapper {
+          width : 0;
+          display: none;
+
+          &.open {
+            width : 84%;
+            margin-right: auto;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: left;
+
+            &+li {
+              &::before {
+                border: none;
+              }
+            }
+
+            input {
+              width         : 100%;
+              text-align    : center;
+              border        : 1px solid transparent;
+              border-radius : 3px;
+              outline       : none;
+              box-shadow    : 0 3px 6px $box-shadow;
+              font-weight   : 400;
+
+              @media (max-width: 576px) {
+                max-height: 24px;
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 576px) {
+        padding-right : 8px !important;
+      }
+    }
+  }
+
+  nav {
+    ul {
+      display         : flex;
+      flex-wrap       : wrap;
+      justify-content : space-around;
+      width : 100%;
+
+      li {
+        margin-right : 9px;
+
+        &:last-of-type{
+          margin-right: 0;
+        }
+
+        a {
+          font-weight    : 700;
+          color          : $mineShaft;
+          text-transform : uppercase;
+          transition     : .4s ease-in-out;
+          font-size: 14px;
+
+          @media (max-width: 1254px) {
+            font-size: 14px;
+          }
+
+          &:hover,
+          &.active {
+            color : $thunderBird
+          }
+        }
+      }
+    }
+  }
+
+  .fixedQuotesContainer {
+    min-height : 73px;
+  }
+
+  #quotes {
+    background-color : white;
+    padding          : 12px 20px;
+    margin-top       : 25px;
+    border-radius    : 10px;
+    box-shadow       : 0 3px 6px $box-shadow;
+
+    &.fixed {
+      width            : 100%;
+      max-width        : 1339px;
+      position         : fixed;
+      top              : 0;
+      animation        : slideInDown .6s;
+      background-color : white;
+      transition       : background-color .2s ease-in-out;
+      z-index          : 9999;
+    }
+
+    ul {
+      li {
+        font-size   : 14.6px;
+        font-weight : 400;
+
+        img {
+          height   : 100%;
+          display  : inline-block;
+          position : relative;
+          top      : -1px;
+        }
+      }
+
+      &.left-side {
+        li {
+          &:not(:last-of-type) {
+            margin-right : 7px;
+          }
+
+          img {
+            width : 10px;
+          }
+
+          &::after {
+            margin-left : 8px;
+            position    : relative;
+            top         : -1px;
+          }
+
+          &.down {
+            &::after {
+              content : url('~@/assets/img/green-down.svg')
+            }
+          }
+
+          &.up {
+            &::after {
+              content : url('~@/assets/img/red-up.svg')
+            }
+          }
+        }
+      }
+    }
+  }
+}

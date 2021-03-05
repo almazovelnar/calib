@@ -1,0 +1,33 @@
+//.page-enter-active,
+//.page-leave-active {
+//  transition-property        : opacity;
+//  transition-timing-function : ease-in-out;
+//  transition-duration        : 100ms;
+//}
+
+//.page-enter, .page-leave-to {
+//  opacity : 0
+//}
+
+@-webkit-keyframes menuOpen {
+  0% { width : 0;}
+  100% { width : 100%;}
+}
+
+@keyframes scaleUp {
+  from {
+    width : 50vw;
+  }
+  to {
+    width : 100vw;
+  }
+}
+
+@keyframes fill {
+  from {
+    width : 0;
+  }
+  to {
+    width : 100%;
+  }
+}

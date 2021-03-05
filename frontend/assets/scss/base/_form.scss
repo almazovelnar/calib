@@ -1,0 +1,17 @@
+.btn {
+  background-color : white;
+  font-weight      : 700;
+  width: 100%;
+  max-width: 340px;
+  padding          : 17px 0;
+  text-transform   : uppercase;
+  box-shadow       : 0 3px 6px $box-shadow;
+  border           : 1px solid transparent;
+  border-radius    : 11px;
+  margin-top       : 34px;
+  outline          : none;
+
+  &:focus {
+    outline: none;
+  }
+}

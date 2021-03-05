@@ -1,0 +1,12 @@
+.layout-search{
+  background-image: url('~@/assets/img/backdrop.jpg');
+  background-size: cover;
+  min-height: 100vh;
+
+  .banner-1 {
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: 999;
+  }
+}

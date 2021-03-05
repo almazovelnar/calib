@@ -1,0 +1,172 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~tiny-slider/src/tiny-slider';
+
+@import 'abstracts/variables';
+
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/utilities/display';
+@import '~bootstrap/scss/utilities/flex';
+@import '~bootstrap/scss/utilities/spacing';
+@import '~bootstrap/scss/utilities/sizing';
+@import '~bootstrap/scss/utilities/text';
+@import '~bootstrap/scss/utilities/background';
+@import '~bootstrap/scss/utilities/float';
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/type';
+@import '~bootstrap/scss/custom-forms';
+
+@import 'abstracts/reset';
+
+@import 'base/fonts';
+@import 'base/form';
+@import 'base/animations';
+
+@import 'layouts/default';
+@import 'layouts/search';
+
+@import 'pages/index';
+@import 'pages/inner';
+@import 'pages/category';
+@import 'pages/search';
+
+@import 'components/header';
+@import "components/footer";
+@import 'components/xslider';
+@import 'components/block';
+@import 'components/bar';
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+body{
+  &.no-scroll {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #imgwrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width : 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 999999999999;
+    padding-top : 5%;
+
+    img {
+      display : block;
+      margin: 0 auto;
+      width : 50%;
+      height: auto;
+    }
+
+    .left {
+      visibility: hidden;
+
+      &::before {
+        padding: 20px;
+        top: 40%;
+        position: absolute;
+        left: 12%;
+        outline: none !important;
+        visibility: visible;
+        content: url("~@/assets/img/arrow-left-white.svg");
+      }
+    }
+
+    .right {
+      visibility: hidden;
+
+      &::before {
+        padding: 20px;
+        right : 12%;
+        position: absolute;
+        top: 40%;
+        outline: none !important;
+        visibility: visible;
+        content: url("~@/assets/img/arrow-left-white.svg");
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.tns-outer {
+  position : relative;
+}
+.tns-controls {
+  width : 100%;
+  position: absolute;
+  top: 38%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0;
+  z-index: 2;
+}
+
+.tns-controls:focus {
+  outline: none;
+}
+
+@media (max-width: 670px) {
+  .tns-controls {
+    display: none;
+  }
+}
+
+.tns-controls button[data-controls='next'] {
+  cursor : pointer;
+  visibility: hidden;
+  position: absolute;
+  right: -70px;
+  outline: none !important;
+
+  &::before {
+    right : 0;
+    outline: none !important;
+    visibility: visible;
+    position: absolute;
+    content: url("~@/assets/img/arrow-left.svg");
+    transform: rotate(180deg);
+  }
+
+  &:focus,
+  &:active {
+    outline: none !important;
+  }
+}
+
+.tns-controls button[data-controls='prev'] {
+  cursor : pointer;
+  visibility: hidden;
+  position: absolute;
+  left: -70px;
+  outline: none !important;
+
+  &::before {
+    outline: none !important;
+    visibility: visible;
+    position: absolute;
+    content: url("~@/assets/img/arrow-left.svg");
+  }
+
+  &:focus,
+  &:active {
+    outline: none !important;
+  }
+}

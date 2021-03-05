@@ -1,0 +1,14 @@
+.category-category-page,
+.user-username-posts-page{
+  .box {
+    background-color : white;
+    padding          : 34px;
+    //margin-top       : 9px;
+    border-radius    : 20px;
+    box-shadow       : 0 3px 6px $box-shadow;
+
+    @media (max-width: 576px) {
+      padding: 34px 22px;
+    }
+  }
+}

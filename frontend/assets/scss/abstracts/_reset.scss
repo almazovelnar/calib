@@ -1,0 +1,36 @@
+body {
+  z-index        : 1;
+  letter-spacing : .3px;
+
+  a {
+    &:hover {
+      text-decoration : none;
+    }
+  }
+
+  img {
+    -webkit-user-drag : none;
+  }
+}
+
+*::-webkit-scrollbar {
+  background-color : white;
+  cursor           : pointer;
+}
+
+*::-webkit-scrollbar-thumb {
+  width            : 12px;
+  border           : 1px solid transparent;
+  border-radius    : 6px;
+  background-color : $gallery;
+  cursor           : pointer;
+}
+
+// fade
+.fade-enter-active, .fade-leave-active {
+  transition : opacity .5s
+}
+
+.fade-enter, .fade-leave-to {
+  opacity : 0
+}
